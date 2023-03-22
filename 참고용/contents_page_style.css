@@ -1,0 +1,179 @@
+body {
+    background-color: black;
+    margin: 10px;
+
+}
+
+
+header {
+    height: 50px;
+    border-bottom: 1px solid white;
+    /*밑줄*/
+    display: flex;
+    /* 요소정렬 */
+    align-items: center;
+    /*가운데로 맞추기*/
+    margin-bottom: 10px;
+    /*대표이미지랑 거리두기*/
+}
+
+div.logo {
+    margin-left: 20px;
+}
+
+/* 머릿글 영화/TV쇼 커뮤니티*/
+nav.header-items {
+
+    display: flex;
+    /* 요소정렬 */
+    margin-left: 30px;
+    /* 왼쪽 여백 */
+    margin-right: 10px;
+    /* 오른쪽 여백 */
+    color: white;
+
+
+}
+
+
+/*각 각 카테고리*/
+li.header-item {
+    margin-left: 10px;
+    /* 사이 서로서로 떼주기  */
+
+    list-style: none;
+    /* 리스트 앞 점 제거*/
+
+    float: left;
+    white-space: nowrap;
+    /* 따로따로 안놀게해줌*/
+
+    display: block;
+    /*글자 클릭 아니고 주변 눌러도 클릭 되게 해줌*/
+    /* text-align: center; 글씨 정렬을 가운데로 설정 */
+    font-size: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    /*리스트 밑줄 제거*/
+}
+
+/* 검색, 로그인 버튼(모음) */
+div.Like_btn {
+    margin-left: auto;
+    /*자동으로 왼쪽을 여백으로 두겠다.*/
+    display: flex;
+
+}
+
+/*검색어를 입력해주세요 창*/
+span>input {
+    width: 200px;
+    height: 10px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 15px;
+}
+
+/*검색어를 입력해주세요 버튼 창*/
+button>img {
+    width: 20px;
+    height: 20px;
+}
+
+.search_btn {
+    /*오른쪽 로그인 버튼이랑 사이 똄*/
+    margin-right: 70px;
+    width: 300px;
+    display: flex;
+}
+
+#login_btn {
+    width: 80px;
+    height: 30px;
+}
+
+/*여기부터 메인*/
+
+main {
+    width: 100%;
+    margin-left: 10px;
+}
+
+
+/*메인에 대표 포스터 이미지*/
+.background {
+
+    background-size: cover;
+    width: 900px;
+    height: 300px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    position : relative;
+
+
+}
+
+#top_img{
+    position : relative;
+    /* background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0)10%
+        rgba(255,255,255,0.5)25%
+        rgba(255,255,255,0.7)40%
+        rgba(255,255,255,1)50%
+        rgba(255,255,255,1)75%
+        rgba(255,255,255,1)100%
+        ); */
+}
+
+
+
+/* 상세 페이지에 있는 포스터 이미지 */
+.poster_img {
+    position: relative;
+    /*대표이미지랑 겹치기*/
+    margin-left: 200px;
+    width: 300px;
+    height: 500px;
+    margin-top: 50px
+}
+
+
+/* 정보모음(평점/장르/연령 등) */
+.information {
+    color: white;
+    width: 300px;
+    height: 100px;
+    margin-top: 50px;
+    font-size: 15pt;
+
+}
+
+/* 오른쪽 왼쪽 묶는 부분*/
+.contents_wrap {
+    width: 1700px;
+}
+
+/* 왼쪽으로 쌓아야됨 (밑이 아니라 그래서 float: left 넣어줌) */
+#a {
+    float: left;
+}
+
+#b {
+    width: 50%;
+    float: left;
+    /*마찬가지*/
+    color: white;
+    position: relative;
+    /*배경 이미지 위에 쓸라면 이거 필요*/
+    margin-left: 100px;
+
+}
+
+
+
