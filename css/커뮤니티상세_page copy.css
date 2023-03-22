@@ -1,0 +1,96 @@
+body {
+    background-color: black !important;
+    height: 1000px;
+}
+
+
+
+
+
+.wrapper {
+    background-color: black;
+    width: 1500px;
+    margin-left: 200px;
+
+}
+
+
+main {
+    width: 100%;
+    margin-left: 10px;
+}
+
+
+/*메인에 대표 포스터 이미지*/
+.background {
+
+    background-size: cover;
+    width: 1200px;
+    height: 300px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    position: relative;
+
+    margin-bottom: 50px;
+}
+
+#top_img {
+    position: relative;
+    /* background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0)10%
+        rgba(255,255,255,0.5)25%
+        rgba(255,255,255,0.7)40%
+        rgba(255,255,255,1)50%
+        rgba(255,255,255,1)75%
+        rgba(255,255,255,1)100%
+        ); */
+}
+
+
+
+/* 상세 페이지에 있는 포스터 이미지 */
+.poster_img {
+    position: relative;
+    /*대표이미지랑 겹치기*/
+    margin-left: 100px;
+    width: 300px;
+    height: 500px;
+    margin-top: 50px
+}
+
+
+/* 정보모음(평점/장르/연령 등) */
+.information {
+    color: white;
+    width: 300px;
+    height: 100px;
+    margin-top: 50px;
+    font-size: 15pt;
+
+}
+
+/* 오른쪽 왼쪽 묶는 부분*/
+.contents_wrap {
+    width: 1700px;
+    display: inline-block;
+    background-color: black;
+
+}
+
+/* 왼쪽으로 쌓아야됨 (밑이 아니라 그래서 float: left 넣어줌) */
+#a {
+    float: left;
+}
+
+#b {
+    width: 50%;
+    float: left;
+    /*마찬가지*/
+    color: white;
+    position: relative;
+    /*배경 이미지 위에 쓸라면 이거 필요*/
+    margin-left: 100px;
+
+}
