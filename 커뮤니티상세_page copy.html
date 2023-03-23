@@ -35,6 +35,13 @@
   <!-- 메인꺼 -->
 
 
+
+  <!-- js쓸라고 -->
+  <!-- 체크박스에 쓴 아이들 -->
+  <script src="/Jquery/커뮤니티상세_page.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -106,7 +113,13 @@
             <div id="hash_result"></div>
           </h3>
         </div>
+        <!-- 체크박스에서 넣은 결과 출력해주는 공간 -->
 
+
+        <!-- 버튼 정렬때문에 테이블 안으로 넣음 -->
+      <table class = "hash_tb" >
+        <td>
+          <tr>
         <div class="hashtag">
           <form action="" name="hashtag_form">
             <div class="accordion" id="accordionExample">
@@ -124,21 +137,21 @@
                   <div class="accordion-body">
 
                     <!-- getCheckboxValue()가 체크박스 클릭했을때 위로 보내주는 JS임! -->
-                    <input class="hash_check" type="checkbox" name="genre" value="코미디"
+                    <input class="hash_check" type="checkbox" name="hash_name" value="코미디"
                       onclick='getCheckboxValue(),checkStr()'> 코미디
-                    <input class="hash_check" type="checkbox" name="genre" value="액션"
+                    <input class="hash_check" type="checkbox" name="hash_name" value="액션"
                       onclick='getCheckboxValue(),checkStr()'> 액션
-                    <input class="hash_check" type="checkbox" name="genre" value="가족"
+                    <input class="hash_check" type="checkbox" name="hash_name" value="가족"
                       onclick='getCheckboxValue(),checkStr()'> 가족
-                    <input class="hash_check" type="checkbox" name="genre" value="SF"
+                    <input class="hash_check" type="checkbox" name="hash_name" value="SF"
                       onclick='getCheckboxValue(),checkStr()'> SF
-                    <input class="hash_check" type="checkbox" name="genre" value="공포"
+                    <input class="hash_check" type="checkbox" name="hash_name" value="공포"
                       onclick='getCheckboxValue(),checkStr()'> 공포
-                    <input class="hash_check" type="checkbox" name="genre" value="범죄"
+                    <input class="hash_check" type="checkbox" name="hash_name" value="범죄"
                       onclick='getCheckboxValue(),checkStr()'> 범죄
-                    <input class="hash_check" type="checkbox" name="genre" value="로맨스코미디"
+                    <input class="hash_check" type="checkbox" name="hash_name" value="로맨스코미디"
                       onclick='getCheckboxValue(),checkStr()'> 로맨스코미디
-                    <input class="hash_check" type="checkbox" name="genre" value="미스터리"
+                    <input class="hash_check" type="checkbox" name="hash_name" value="미스터리"
                       onclick='getCheckboxValue(),checkStr()'> 미스터리
 
 
@@ -158,11 +171,16 @@
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <input class="hash_check" type="checkbox" name="emotion" value="슬픔" onclick='getCheckboxValue()'> 슬픔
-                    <input class="hash_check" type="checkbox" name="emotion" value="재미" onclick='getCheckboxValue()'> 재미
-                    <input class="hash_check" type="checkbox" name="emotion" value="통쾌" onclick='getCheckboxValue()'> 통쾌
-                    <input class="hash_check" type="checkbox" name="emotion" value="사랑" onclick='getCheckboxValue()'> 사랑
-                    <input class="hash_check" type="checkbox" name="emotion" value="그리움" onclick='getCheckboxValue()'>
+                    <input class="hash_check" type="checkbox" name="hash_name" value="슬픔"
+                      onclick='getCheckboxValue(),checkStr()'> 슬픔
+                    <input class="hash_check" type="checkbox" name="hash_name" value="재미"
+                      onclick='getCheckboxValue(),checkStr()'> 재미
+                    <input class="hash_check" type="checkbox" name="hash_name" value="통쾌"
+                      onclick='getCheckboxValue(),checkStr()'> 통쾌
+                    <input class="hash_check" type="checkbox" name="hash_name" value="사랑"
+                      onclick='getCheckboxValue(),checkStr()'> 사랑
+                    <input class="hash_check" type="checkbox" name="hash_name" value="그리움"
+                      onclick='getCheckboxValue(),checkStr()'>
                     그리움
 
                   </div>
@@ -179,89 +197,86 @@
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <input class="hash_check" type="checkbox"> 성인
-                    <input class="hash_check" type="checkbox"> 학생
-                    <input class="hash_check" type="checkbox"> 어린이
-                    <input class="hash_check" type="checkbox"> 2030
-                    <input class="hash_check" type="checkbox"> 7080
+                    <input class="hash_check" type="checkbox" name="hash_name" value="성인"
+                      onclick='getCheckboxValue(),checkStr()'> 성인
+                    <input class="hash_check" type="checkbox" name="hash_name" value="학생"
+                      onclick='getCheckboxValue(),checkStr()'> 학생
+                    <input class="hash_check" type="checkbox" name="hash_name" value="어린이"
+                      onclick='getCheckboxValue(),checkStr()'> 어린이
+                    <input class="hash_check" type="checkbox" name="hash_name" value="2030"
+                      onclick='getCheckboxValue(),checkStr()'> 2030
+                    <input class="hash_check" type="checkbox" name="hash_name" value="7080"
+                      onclick='getCheckboxValue(),checkStr()'> 7080
 
                   </div>
                 </div>
               </div>
             </div>
-            <!-- 체크박스 값 출력 -->
-            <!-- https://hianna.tistory.com/430 -->
-            <input type="submit">
-          </form>
+
+          </tr>
+          </td>
+
+          <!-- 버튼만 모아두는 행 -->
+          <tr >
+            <td >
+
+            <!-- 체크박스 값 보내기 -->
+            <button class="btn btn-primary" type="submit"
+              style="background-color : #ff7600; border:none">SUBMIT</button>
+            
+            </form>
+            <!-- 전체 리셋 버튼 -->
+            <button class="btn btn-prsimary" type="button" onclick='reset()'
+              style="background-color : #ff7600; color:white ">ALLRESET</button>
+            </td>
+            </tr>
+              
+            </table>
+
         </div>
 
+      </div>
+      <!-- 해시태그 끝 -->
+
+
+
+
+      <!--드래그앤 드랍 시작-->
+      <!-- <div class="drag_drop">
+
+        <body>
+          <div class="container">
+            <button class="draggable" draggable="true">🦊</button>
+            <button class="draggable" draggable="true">🐸</button>
+          </div>
+          <div class="container">
+            <button class="draggable" draggable="true">🐶</button>
+            <button class="draggable" draggable="true">🐱</button>
+          </div> -->
 
 
 
       </div>
-      <script src="jquery-3.6.4.min.js"></script>
-
-
-      <!-- <input type="button" value="체크확인" onclick=checkStr();> -->
-      <input type="button" value="reset" onclick=reset();>
-      <script>
-
-        function getCheckboxValue() {
-          // 선택된 목록 가져오기
-          const query = 'input[name="genre"]:checked';
-          const selectedEls =
-            document.querySelectorAll(query);
-
-          // 선택된 목록에서 value 찾기
-          let result = '';
-          selectedEls.forEach((el) => {
-            result += el.value + ' ';
-          });
-
-          // 출력
-          document.getElementById('hash_result').innerText
-            = result;
-        }
 
 
 
-        // -----------------
-        function checkStr() {
-          var vCnt = 0;
-          let list = [];
-          for (var i = 0; i < document.hashtag_form.elements.length; i++) {
-            if (document.hashtag_form.elements[i].name == 'genre') {
-              if (document.hashtag_form.elements[i].checked == true) {
-                vCnt++;
-                list.push(i);
-              }
-            }
-          }
-
-
-          if (vCnt > 3) {
-            alert('세개만 선택해주시기바랍니다.');
-            list.pop(1);
-            let a = document.querySelectorAll('.accordion-body > input');
-
-              $(".hash_check").prop("disabled", true);
-            
-
-            console.log(list);
-
-            return;
-          }
-        }
-        function reset(){
-          $(".hash_check").prop("disabled", false);
-
-        }
 
 
 
-      </script>
+      <!--드래그앤 드랍 끝-->
 
 
+
+
+
+
+
+
+
+
+
+
+    </div>
 
 
 
