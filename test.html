@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .slide_wrapper {
+            position: relative;
+            width: 1146px;
+            margin: 0 auto;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .slides {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: left 0.5s ease-out;
+        }
+
+        .slides li:not(:last-child) {
+            float: left;
+            margin-right: 30px;
+        }
+
+        .prev {
+            top: 97px;
+            position: absolute;
+            text-align: center;
+            z-index: 2;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+
+        .next {
+            top: 97px;
+            left: 1055px;
+            position: absolute;
+            margin-right: 10px;
+            text-align: center;
+            z-index: 1;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>장르</h3>
+    </div>
+    <div class="slide_wrapper" id="movie1">
+        <button class="prev">prev</button>
+        <button class="next">next</button>
+        <ul class="slides">
+            <li><a href="https://www.naver.com"><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+        </ul>
+
+    </div>
+
+    <div class="slide_wrapper" id="movie2">
+        <button class="prev">prev</button>
+        <button class="next">next</button>
+        <ul class="slides">
+            <li><a href="https://www.daum.net"><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+            <li><a href=""><img src="/img/KakaoTalk_20230323_161740016.jpg" alt=""></a></li>
+        </ul>
+
+    </div>
+    
+
+
+
+
+    <script>
+        var slides = document.querySelector('#movie1 .slides'),
+            slide = document.querySelectorAll('#movie1 .slides li'),
+            currentIdx = 0,
+            slideCount = slide.length,
+            slideWidth = 166,
+            slideMargin = 30,
+            prevBtn = document.querySelector('#movie1 .prev'),
+            nextBtn = document.querySelector('#movie1 .next');
+
+        slides.style.width = (slideWidth + slideMargin) * slideCount - slideMargin + 'px';
+
+        function moveSlide(num) {
+            slides.style.left = (slideWidth + slideMargin) * -num + "px";
+            currentIdx = num;
+        }
+        nextBtn.addEventListener('click', function () {
+            if (currentIdx < slideCount - 3) {
+                moveSlide(currentIdx + 1);
+            }
+        });
+        prevBtn.addEventListener('click', function () {
+            if (currentIdx > 0) {
+                moveSlide(currentIdx - 1);
+            }
+        });
+        
+        var slides = document.querySelector('#movie2 .slides'),
+            slide = document.querySelectorAll('#movie2 .slides li'),
+            currentIdx = 0,
+            slideCount = slide.length,
+            slideWidth = 166,
+            slideMargin = 30,
+            prevBtn = document.querySelector('#movie2 .prev'),
+            nextBtn = document.querySelector('#movie2 .next');
+
+        slides.style.width = (slideWidth + slideMargin) * slideCount - slideMargin + 'px';
+
+        function moveSlide(num) {
+            slides.style.left = (slideWidth + slideMargin) * -num + "px";
+            currentIdx = num;
+        }
+        nextBtn.addEventListener('click', function () {
+            if (currentIdx < slideCount - 3) {
+                moveSlide(currentIdx + 1);
+            }
+        });
+        prevBtn.addEventListener('click', function () {
+            if (currentIdx > 0) {
+                moveSlide(currentIdx - 1);
+            }
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>
