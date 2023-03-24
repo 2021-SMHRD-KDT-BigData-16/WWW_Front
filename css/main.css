@@ -8,6 +8,7 @@ li {
 }
 
 .slide_wrapper {
+    
     position: relative;
     width: 1146px;
     margin: 0 auto;
@@ -16,6 +17,7 @@ li {
 }
 
 .slides {
+    padding: 0 !important;
     position: absolute;
     left: 0;
     top: 0;
@@ -42,13 +44,12 @@ li {
     top: 97px;
     left: 1055px;
     position: absolute;
-    margin-right: 10px;
     text-align: center;
     z-index: 1;
     background-color: #333;
     color: white;
     padding: 10px 20px;
-    margin: 0 10px;
+    margin: 0 6px;
 }
 
 #movie3 {
