@@ -25,14 +25,45 @@
     <!-- header꺼 -->
 
     <!-- 검색창용 -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="/참고용/search_test2.js"></script>
+
+
+
+
     <link rel="stylesheet" href="/자동완성/test2.css">
     
+    <script src="/참고용/search_test2.js"></script>
 </head>
+
+
+
+<!-- 임시 -->
+<script>
+	
+	$(function () {	//화면 로딩후 시작
+		$("#searchInput").autocomplete({  //오토 컴플릿트 시작
+			source: List,	// source는 data.js파일 내부의 List 배열
+			focus : function(event, ui) { // 방향키로 자동완성단어 선택 가능하게 만들어줌	
+				return false;
+			},
+			minLength: 1,// 최소 글자수
+			delay: 100,	//autocomplete 딜레이 시간(ms)
+			//disabled: true, //자동완성 기능 끄기
+		});
+	});
+</script>
+
+<!-- 임시 -->
+
+
 
 <body>
 
     <!-- 헤더 시작 -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style = "z-index: 1 !important;">
         <div class="container-fluid">
             <a class="navbar-brand" href="/ex03_myPage2.html"><img src="/img/로고.png" alt=""
                     style="width : 80px ; margin-left : 10px"></a>
@@ -66,22 +97,18 @@
                         <a class="btn_link" style="color: white !important" href="contentSearch">검색</a>
                     </button>
                 </form> -->
+        
+                <div>
+                    검색어<input id="searchInput" style="margin-left: 20px; width: 400px; z-index: 2;" name = "search">
 
-
-                <div class="case">
-                    <div class="input_wrap">
-                        <form action="#">
-                            <input type="text" class="search_input" placeholder="검색어를 입력하세요." name="title">
-                            <input type="submit" class="search_btn" name="" id="">
-                        </form>
-                    </div>
-
-                    <!-- 나오는 공간? -->
-
-
+                    <button type="button" class="btn btn-outline-warning">
+                        <a class="btn_link" style="color: white !important" href="#">검색</a>
+                    </button>
                 </div>
-                
 
+
+        
+        
 
 
 
@@ -104,13 +131,27 @@
         </div>
     </nav>
     <!-- 헤더 끝 -->
+
     
-    <!-- 자동완성 글 써지는 공간 -->
-    <div class="suggestions suggestions_pannel">
-    </div>
 
 
     <div>
+
+        <img src ="/img/movie_img/12 몽키즈.jpg">
+        <img src ="/img/movie_img/12 몽키즈.jpg">
+        <img src ="/img/movie_img/12 몽키즈.jpg">
+        <img src ="/img/movie_img/12 몽키즈.jpg">
+        <img src ="/img/movie_img/12 몽키즈.jpg">
+        <img src ="/img/movie_img/12 몽키즈.jpg">
+        <img src ="/img/movie_img/12 몽키즈.jpg">
+        <img src ="/img/movie_img/12 몽키즈.jpg">
+        <img src ="/img/movie_img/12 몽키즈.jpg">
+        <img src ="/img/movie_img/12 몽키즈.jpg">
+        <img src ="/img/movie_img/12 몽키즈.jpg">
+        <img src ="/img/movie_img/12 몽키즈.jpg">
+        <img src ="/img/movie_img/12 몽키즈.jpg">
+        <img src ="/img/movie_img/12 몽키즈.jpg">
+        <img src ="/img/movie_img/12 몽키즈.jpg">
         <br>
         <br>
         <br>
@@ -224,8 +265,10 @@
 
 
 
-<!-- 자동완성 JS -->
-    <script src="/자동완성/test2.js"></script>
+
+
+        <!--js파일 호출 index.js -->
+        <!-- <script  src="/Jquery/auto_search.js"></script> -->
 
 </body>
 
