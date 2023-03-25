@@ -5,8 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>dragndrop</title>
+
+    <!-- 검색창용 -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="/Jquery/autosearch_test.js"></script>
+
+
     <style>
+
         /* 전체 */
         .dd_container {
             
@@ -17,7 +26,7 @@
             /* display: flex; */
         }
 
-        button {
+        button.draggable {
             width: 170px;
             height: 240px;
             border: none;
@@ -51,6 +60,17 @@
         <button class="draggable" draggable="true"><img src = "http://placehold.it/160X230" /></button>
     </div>
     <div class="container">
+
+
+        <form class="d-flex" role="search" align="left" action ="">
+            <input id="searchInput" style="margin-right: 10px; width: 400px; z-index: 2;"  name = "search" placeholder=" 검색어를 입력해주세요.">
+            <button type="submit" class="btn btn-outline-warning">
+                검색
+            </button>
+        </form>
+
+
+
         <button class="draggable" draggable="true"><img src = "http://placehold.it/160X230" /></button>
         <button class="draggable" draggable="true"><img src = "http://placehold.it/160X230" /></button>
     </div>

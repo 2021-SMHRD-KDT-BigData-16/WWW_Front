@@ -23,7 +23,7 @@ var slides = document.querySelector('#movie .slides'),
                 moveSlide(currentIdx - 1);
             }
         });
-        
+
 var slides1 = document.querySelector('#movie1 .slides'),
             slide1 = document.querySelectorAll('#movie1 .slides li'),
             currentIdx1 = 0,
