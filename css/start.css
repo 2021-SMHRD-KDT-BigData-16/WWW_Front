@@ -77,14 +77,6 @@ form{
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-#combox:nth-child(1){
-            margin-left: 10px;
-        }
-#combox{
-            
-            width: 1700px;
-            margin-left: 180px;
-        }
 body{
         background-color: #000000;
         color: white;
