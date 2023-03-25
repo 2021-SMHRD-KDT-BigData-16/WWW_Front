@@ -20,7 +20,7 @@ var slides1 = document.querySelector('#movie1 .slides'),
         });
         prevBtn1.addEventListener('click', function () {
             if (currentIdx1 > 0) {
-                moveSlide1(currentIdx1 - 1);
+                moveSlide1(currentIdx1 - 4);
             }
         });
 
@@ -46,7 +46,7 @@ var slides1 = document.querySelector('#movie1 .slides'),
         });
         prevBtn2.addEventListener('click', function () {
             if (currentIdx2 > 0) {
-                moveSlide2(currentIdx2 - 1);
+                moveSlide2(currentIdx2 - 4);
             }
         });
 
@@ -75,3 +75,5 @@ var slides1 = document.querySelector('#movie1 .slides'),
                 moveSlide3(currentIdx3 - 1);
             }
         });
+
+        
