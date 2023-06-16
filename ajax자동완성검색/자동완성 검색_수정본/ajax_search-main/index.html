@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <!-- 구글 웹폰트 -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css"> 
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" 
+        crossorigin="anonymous"></script>
+
+        <!-- css, js, jquery -->
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+        <script type="text/javascript" src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <input id="movieInput" type="text" data-cate="high" onkeyup="search(this);" placeholder="영화를 입력하세요">
+        
+        <!-- 연관검색 리스트가 출력되는곳 -->
+        <div id="movieList" style="overflow:scroll; width:500px; height:150px;"></div>
+        <!-- 출력시키는 곳 -->
+        <div id="selected"></div>
+
+
+
+    </body>
+
+</html>

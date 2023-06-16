@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dragndrop</title>
 
+    
+
     <!-- 검색창용 -->
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="/Jquery/autosearch_test.js"></script>
+	<script src="/Jquery/footer,header_auto_search.js"></script>
 
 
     <style>
@@ -37,7 +39,7 @@
             background: #eaeaea4f;
         }
 
-        .container {
+        .d_container {
             height : 270px;
             margin: 10px;
             padding: 10px;
@@ -53,13 +55,21 @@
 
 <body>
 
+
+
+
+
+
+
+    
+
 <div class="dd_container">
-    <div class="container">
+    <div class="d_container">
         <button class="draggable" draggable="true"><img src = "http://placehold.it/160X230" />
         </button>
         <button class="draggable" draggable="true"><img src = "http://placehold.it/160X230" /></button>
     </div>
-    <div class="container">
+    <div class="d_container">
 
 
         <form class="d-flex" role="search" align="left" action ="">
@@ -80,7 +90,7 @@
 
     <script>
         const draggables = document.querySelectorAll(".draggable");
-        const containers = document.querySelectorAll(".container");
+        const containers = document.querySelectorAll(".d_container");
 
         draggables.forEach(draggable => {
             draggable.addEventListener("dragstart", () => {
@@ -124,6 +134,10 @@
                 { offset: Number.NEGATIVE_INFINITY },
             ).element;
         }
+
+
+
+        
 
 
 

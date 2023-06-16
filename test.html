@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="./styles/font_style.css">
+    <link rel="stylesheet" type="text/css" href="./styles/header_nick.css">
+    <link rel="icon" href="./logo_img/favicon.png">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/footers/">
+    <link rel="stylesheet" href="./styles/footer,header.css">
+    <link rel="stylesheet" href="./styles/community_detail.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+    <!-- header꺼 -->
+    <link rel="canonical" href="https://getbootstrap.kr/docs/5.2/examples/navbar-fixed/">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- 검색창용 -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="/Jquery/footer,header_auto_search.js"></script>
+
+    <!-- 드래그 앤 드랍용 검색창 -->
+    <script src="/Jquery/dragndrop.js"></script>
+
+
+    <!-- 메인꺼 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+
+
+    <!-- 헤더 시작 -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="z-index: 9 !important;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/ex03_myPage2.html"><img src="./logo_img/작은 로고.png" alt=""
+                    style="width : 80px ; margin-left : 10px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" style="font-size : 13pt" aria-current="page"
+                            href="contentSearch">홈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="font-size : 13pt" aria-current="page"
+                            href="moviePage.jsp">영화</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="font-size : 13pt" aria-current="page"
+                            href="community.jsp">플레이리스트</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex" role="search" align="center" action="SearchResult" method="get">
+                    <input id="searchInput" style="margin-right: 10px; width: 400px; z-index: 2;" name="search"
+                        placeholder=" 검색어를 입력해주세요.">
+                    <button type="submit" class="btn btn-outline-warning" style="margin-right : 95px">
+                        <a class="btn_link" style="color: white !important" href="">검색</a>
+                    </button>
+                </form>
+                    <p class="header_nick">
+                    </p>
+                    <form action="logoutService" align="center" method="post">
+                        <button type="button" class="btn btn-outline-warning" style="margin-left : 20px ">
+                            <a class="btn_link" style="color: white !important" href="logoutService">로그아웃</a>
+                        </button>
+                    </form>
+
+
+
+
+            </div>
+        </div>
+    </nav>
+    <!-- 헤더 끝 -->
+
+    <script>
+
+
+
+        List = ["에브리씽 에브리웨어 올 앳 원스",
+            "서치",
+            "노스맨",
+            "놉",
+            "바빌론",
+            "더 웨일",
+            "장화신은 고양이: 끝내주는 모험",
+            "헤어질 결심",
+            "너의 이름은",
+            "듄",
+            "메간",
+            "타이타닉",
+            "스마트폰을 떨어뜨렸을 뿐인데",
+            "엑시던트",
+            "탑건 매버릭",
+            "블랙폰",
+            "영웅",
+            "애프터썬",
+            "헬 독스",
+            "올빼미",
+            "범죄도시 2",
+            "히트",
+            "오늘 밤, 세계에서 이 사랑이 사라진다 해도",
+            "해리 포터와 마법사의 돌",
+            "더 베스트 오브 에너미즈",
+            "우리 집에 유령이 산다",
+            "루터 태양의 몰락",
+            "유령",
+            "존 윅",
+            "스트레이",
+            "TAR 타르",
+            "아바타 물의 길",
+            "9 나인",
+            "감각의 제국",
+            "사랑은 비를 타고",
+            "더 배트맨",
+            "더 메뉴",
+            "서부 전선 이상 없다",
+            "스즈메의 문단속",
+            "윈데르송 누니스 내 설교를 들어주소서",
+            "서치 2",
+            "살인의 추억",
+            "히든 피겨스",
+            "압꾸정",
+            "스탠 바이 미",
+            "스파이더맨 노 웨이 홈",
+            "인터스텔라",
+            "안녕, 나의 소울메이트",
+            "더 게임 체인저스",
+            "세레니티",
+            "어스",
+            "동감",
+            "매직 인 더 문라이트",
+            "비스트",
+            "반지의 제왕 반지 원정대",
+            "메인스트림",
+            "첫 키스에 반하다",
+            "3000년의 기다림",
+            "샤잠!",
+            "더 비지트",
+            "테넷",
+            "킹메이커",
+            "날씨의 아이",
+            "치히로 상",
+            "다음 소희",
+            "임금님의 사건수첩",
+            "스크림 4G",
+            "엣지 오브 투모로우",
+            "데시벨",
+            "컨택트",
+            "크리드",
+            "위대한 레보스키",
+            "크리드 3",
+            "이니셰린의 밴시",
+            "크리드 2",
+            "멜브룩스의 세계사",
+            "나이브스 아웃",
+            "어미",
+            "RRR 라이즈 로어 리볼트",
+            "인셉션",
+            "스네이크 아이즈 지.아이.조",
+            "밀리언 달러 베이비",
+            "슬픔의 삼각형",
+            "조커",
+            "엘비스",
+            "프라미싱 영 우먼",
+            "나이브스 아웃 글래스 어니언",
+            "육사오",
+            "샷건 웨딩",
+            "아바타",
+            "트루먼 쇼",
+            "초속 5센티미터",
+            "돈 워리 달링",
+            "내가 사는 피부",
+            "더 퀸",
+            "가재가 노래하는 곳"];
+        $(function () {	//화면 로딩후 시작
+            $("#searchInput_1").autocomplete({  //오토 컴플릿트 시작
+                source: List,	// source는 data.js파일 내부의 List 배열
+                focus: function (event, ui) { // 방향키로 자동완성단어 선택 가능하게 만들어줌	
+                    return false;
+                },
+                minLength: 1,// 최소 글자수
+                delay: 100,	//autocomplete 딜레이 시간(ms)
+                //disabled: true, //자동완성 기능 끄기
+            });
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>
